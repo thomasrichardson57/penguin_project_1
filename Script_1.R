@@ -9,9 +9,8 @@ summary(mod1)
 anova(mod1)
 
 #do some plots using ggplot2
-p1 <- ggplot(penguin, aes(flipper_length_mm, bill_length_mm)) + 
-  geom_line(alpha = 0.2)+
-  geom_smooth(method='lm') + 
+p1 <- ggplot() + 
+  geom_line(data = mod1, aes(flipper_length_mm, bill_length_mm), alpha = 0.2)+
   theme_bw()
 p1
 
